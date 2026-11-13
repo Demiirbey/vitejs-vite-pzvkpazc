@@ -1,0 +1,131 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #090b12;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 85px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #222532;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #9b78ff;
+}
+
+.status {
+  color: #b8a4ff;
+  font-size: 11px;
+  border: 1px solid #514078;
+  padding: 9px 14px;
+  border-radius: 20px;
+}
+
+.main {
+  width: 90%;
+  max-width: 760px;
+  margin: auto;
+  padding: 90px 0;
+  text-align: center;
+}
+
+.tag {
+  color: #a58aff;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(38px, 7vw, 66px);
+  line-height: 1.12;
+  margin: 25px 0;
+}
+
+h1 span {
+  color: #a58aff;
+}
+
+.description {
+  color: #999eaf;
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.converter {
+  background: #151824;
+  border: 1px solid #292e40;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: left;
+}
+
+.converter label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.converter input {
+  width: 100%;
+  padding: 17px;
+  background: #090b12;
+  border: 1px solid #34394c;
+  border-radius: 9px;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+.converter button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 17px;
+  border: 0;
+  border-radius: 9px;
+  background: #8966f5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.converter button:hover {
+  background: #a087ff;
+}
+
+.converter small {
+  display: block;
+  color: #85899a;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #666b7d;
+  font-size: 12px;
+}
