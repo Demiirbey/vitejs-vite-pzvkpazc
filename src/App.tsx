@@ -771,7 +771,9 @@ function App() {
         throw new Error("AI video çıktısı okunamadı.");
       }
 
-      const blob = new Blob([outputData], { type: "video/mp4" });
+      const blob = new Blob([outputData.buffer as ArrayBuffer], {
+  type: "video/mp4",
+});
       const url = URL.createObjectURL(blob);
 
       setAiVideoUrl((oldUrl) => {
@@ -923,7 +925,9 @@ function App() {
           throw new Error("Oluşturulan video okunamadı.");
         }
 
-        const blob = new Blob([data], { type: "video/mp4" });
+        const blob = new Blob([data.buffer as ArrayBuffer], {
+  type: "video/mp4",
+});
         const url = URL.createObjectURL(blob);
         newUrls.push(url);
 
