@@ -1,28 +1,30 @@
 {
-  "name": "demivra-shorts",
+  "name": "demivra-ai-studio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
+
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "lint": "tsc -b --pretty",
     "preview": "vite preview"
   },
+
   "dependencies": {
-    "@ffmpeg/core": "^0.12.10",
-    "@ffmpeg/ffmpeg": "^0.12.15",
-    "@ffmpeg/util": "^0.12.2",
-    "@huggingface/transformers": "^4.3.2",
-    "dejavu-fonts-ttf": "^2.37.3",
-    "onnxruntime-web": "^1.31.1",
+    "@ffmpeg/ffmpeg": "0.12.10",
+    "@ffmpeg/util": "0.12.2",
+    "onnxruntime-web": "1.31.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.2.1",
+    "@vitejs/plugin-react": "^6.3.0",
+    "oxlint": "^1.93.0",
     "typescript": "~7.0.2",
-    "vite": "^8.3.6"
+    "vite": "^8.3.8"
   }
 }
