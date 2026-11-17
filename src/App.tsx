@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Shorts from './Shorts';
 import './App.css';
 
@@ -57,6 +57,19 @@ const tools = [
 function App() {
   const [page, setPage] = useState<Page>('home');
   const [prompt, setPrompt] = useState('');
+  const [apiStatus, setApiStatus] = useState<'checking' | 'online' | 'offline'>(
+    'checking'
+  );
+
+  useEffect(() => {
+    fetch('/api/health')
+      .then((response) => {
+        if (!response.ok) throw new Error('API request failed');
+        return response.json();
+      })
+      .then((data) => setApiStatus(data.success ? 'online' : 'offline'))
+      .catch(() => setApiStatus('offline'));
+  }, []);
 
   const active = menu.find((item) => item.id === page);
 
@@ -115,7 +128,12 @@ function App() {
           </div>
           <div className="top-actions">
             <span className="status">
-              <i /> Sistem hazır
+              <i />
+              {apiStatus === 'checking'
+                ? 'API kontrol ediliyor'
+                : apiStatus === 'online'
+                ? 'API çevrimiçi'
+                : 'API bağlantısı yok'}
             </span>
             <button
               className="upgrade-button"
